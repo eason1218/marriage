@@ -1,15 +1,12 @@
 #### Preamble ####
-# Purpose: Tests... [...UPDATE THIS...]
-# Author: Rohan Alexander [...UPDATE THIS...]
-# Date: 11 February 2023 [...UPDATE THIS...]
-# Contact: rohan.alexander@utoronto.ca [...UPDATE THIS...]
+# Purpose: Test data marriage in covid
+# Author: YiZhuo Li
+# Date: 19 Sep 2024
+# Contact: liyizhuo.li@mail.utoronto.ca
 # License: MIT
 # Pre-requisites: [...UPDATE THIS...]
 # Any other information needed? [...UPDATE THIS...]
-
-
 #### Workspace setup ####
 library(tidyverse)
-# [...UPDATE THIS...]
-
-#### Test data ####
+all(duplicated(simulated_data$id) == FALSE)
+marriage_licenses_numeric <- is.numeric(simulated_data$MARRIAGE_LICENSES)
