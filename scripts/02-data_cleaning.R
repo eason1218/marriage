@@ -1,8 +1,8 @@
 #### Preamble ####
-# Purpose: Cleans the raw plane data recorded by two observers..... [...UPDATE THIS...]
-# Author: Rohan Alexander [...UPDATE THIS...]
-# Date: 6 April 2023 [...UPDATE THIS...]
-# Contact: rohan.alexander@utoronto.ca [...UPDATE THIS...]
+# Purpose: Clearn marriage in covid
+# Author: YiZhuo Li
+# Date: 19 Sep 2024
+# Contact: liyizhuo.li@mail.utoronto.ca
 # License: MIT
 # Pre-requisites: [...UPDATE THIS...]
 # Any other information needed? [...UPDATE THIS...]
@@ -16,6 +16,10 @@ raw_data <- read_csv("inputs/data/plane_data.csv")
 cleaned_data <-
   raw_data |>
   janitor::clean_names() |>
+  separate(col = time_period,
+            into = c("year","month"),
+            sep = "_") |>
+  mutate(date = lubridate)
   select(wing_width_mm, wing_length_mm, flying_time_sec_first_timer) |>
   filter(wing_width_mm != "caw") |>
   mutate(
