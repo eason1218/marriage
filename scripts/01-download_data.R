@@ -24,7 +24,7 @@ resources <- list_package_resources
 # change the_raw_data to whatever name you assigned when you downloaded it.
 datastore_resources <- filter(resources, tolower(format))
 
-data <- filter(datastore_resources, row_number()==1) %>%
+data <- filter(datastore_resources, row_number()==1) %>% get_resource()
 
 write_csv(data, "data/raw_data/raw_data.csv") 
 
