@@ -32,4 +32,4 @@ data_raw <- filter(datastore_resources, row_number()==1) %>% get_resource()
 #### Save data ####
 # [...UPDATE THIS...]
 # change the_raw_data to whatever name you assigned when you downloaded it.
-write_csv(data_raw, "data/data_raw.csv") 
+write_csv(data, "data/raw_data/raw_data.csv") 
