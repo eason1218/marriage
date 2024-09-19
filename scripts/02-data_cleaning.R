@@ -1,5 +1,5 @@
 #### Preamble ####
-# Purpose: Clearn marriage in covid
+# Purpose: Clean marriage in covid
 # Author: YiZhuo Li
 # Date: 19 Sep 2024
 # Contact: liyizhuo.li@mail.utoronto.ca
